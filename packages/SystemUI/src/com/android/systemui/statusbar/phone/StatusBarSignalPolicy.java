@@ -280,6 +280,8 @@ public class StatusBarSignalPolicy implements SignalCallback,
         state.typeContentDescription = indicators.typeContentDescription;
         state.showTriangle = indicators.showTriangle;
         state.roaming = indicators.roaming && !mHideRoaming;
+        state.activityEnabled = mActivityEnabled
+                && state.typeId != TelephonyIcons.VOWIFI.dataType;
         state.activityIn = indicators.activityIn;
         state.activityOut = indicators.activityOut;
         state.volteId = indicators.volteIcon;
